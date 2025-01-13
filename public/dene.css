@@ -1,0 +1,334 @@
+html{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    scroll-behavior: smooth;
+    font-size: 16px;
+    --hue: 216;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font: var(--p);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    
+}
+#logo{
+    height: 80px;
+    width: 80px;
+    
+}
+#logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 70%;
+}
+a{
+
+    
+    font: 600 1rem/1em var(--ff);
+    color: var(--accent-color);
+    text-decoration: none;
+
+}
+#dene-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+#dene{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    margin: auto ;
+    gap: 1rem;
+}
+textarea{
+    width: 95%;
+    background-color: var(--pre-primary-color);
+    color: var(--tertiary-color);
+    border: none;
+    resize: none;
+    border-radius: 1rem;
+    height: 50vh;
+    outline: none;
+    border: 1px solid var(--pre2-primary-color);
+    padding: 1rem;
+
+}
+textarea::placeholder{
+    color: var(--pre-tertiary-color);
+}
+#giris-sonuc{
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    background-color: var(--pre-primary-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 70vh;
+    min-height: fit-content;
+    border: solid 1px var(--pre2-primary-color);
+    gap: 1rem;
+}
+
+#doğrula-label{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#doğrula-check{
+    color: var(--accent-color);
+    width: 1rem;
+}
+#doğrula{
+    font: 600 1rem/1em var(--ff);
+    color: var(--accent-color);
+}
+#model-info{
+    width: fit-content;
+    text-align: center;
+    border: solid 1px var(--tertiary-color);
+    border-radius: 2rem;
+    line-height: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#uiorapi{
+    display: flex;;
+    width: fit-content;
+    border: solid 1px var(--pre2-primary-color);
+    border-radius: 5rem;
+
+}
+
+#uiorapi div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+#giris-sonuc-textarea{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#giris-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width:48%;
+
+}
+
+#sonuc-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width:48%;
+
+}
+#doğrula-button{
+    width: fit-content;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font: 600 1rem/1em var(--ff);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5rem;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: all 0.3s;
+}
+#doğrula-button:hover{
+    background-color: var(--accent-color2);
+}
+#doğrula-button:active{
+    transform: scale(0.95);
+}
+#doğrula-button:disabled{
+    background-color: var(--pre2-primary-color);
+    color: var(--pre-tertiary-color);
+    cursor: not-allowed;
+}
+#sonuc-bekleme{
+    width: 95%;
+    background-color: var(--pre-primary-color);
+    color: var(--tertiary-color);
+    border-radius: 1rem;
+    height: 50vh;
+    border: 1px solid var(--pre2-primary-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#sonuc-logo{
+    width: 60px;
+    animation: waiting 2s infinite;
+}
+@keyframes waiting {
+    0%{
+        scale: 1;
+    }
+    50%{
+
+        scale: 1.2;
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#sonuc-dogru i{
+    color: var(--accent-color);
+}
+#sonuc-yanlis{
+    display: flex;
+    align-items: center;
+}
+#sonuc-yanlis i{
+    color: var(--accent-color);
+}
+#api-container{
+    
+    display: flex;
+
+    justify-content: center;
+    width: fit-content;
+    border: solid 1px var(--pre2-primary-color);
+    border-radius: 1rem;
+}
+code{
+    background-color: var(--pre-primary-color) !important;
+    color: var(--secondary-color) !important;
+}
+#selections{
+    display: flex;
+    gap: 1rem;
+}
+
+#languages{
+    display: flex;;
+    width: fit-content;
+    border: solid 1px var(--pre2-primary-color);
+    border-radius: 5rem;
+
+}
+
+#languages div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+#settings{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+#temizle-button{
+    width: fit-content;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font: 600 1rem/1em var(--ff);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5rem;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: all 0.3s;
+}
+#temizle-button:hover{
+    background-color: var(--accent-color2);
+}
+#temizle-button:active{
+    transform: scale(0.95);
+}
+#checkbox{
+    accent-color: var(--accent-color);
+}
+#sonuc{
+    height: 45vh;
+    white-space: pre-wrap;
+    font-size: larger;
+}
+:root {
+    
+    --ff: "Montserrat", sans-serif;
+    --ff2: "Fira Code", monospace;
+    --h1: 800 2rem/1.2em var(--ff);
+    --p: 400 1rem/1.5em var(--ff);
+    --p-code: 300 .7rem/2em var(--ff2);
+    --tertiary-hue: calc(var(--hue) + 300);
+    --accent-hue: calc(var(--hue) + 60);
+
+    --primary-color: hsl(var(--hue), 50%, 10%);
+    --pre-primary-color: hsl(var(--hue), 50%, 15%);
+    --pre2-primary-color: hsl(var(--hue), 50%, 25%);
+
+    --secondary-color: hsl(var(--hue), 50%, 90%);
+
+    --tertiary-color: hsl(var(--tertiary-hue), 80%, 80%);
+    --pre-tertiary-color: hsl(var(--tertiary-hue), 80%, 40%);
+
+    --accent-color: hsl(var(--accent-hue), 80%, 80%);
+    --accent-color2: hsl(var(--accent-hue), 80%, 50%);
+    --pre-accent-color: hsl(var(--accent-hue), 80%, 85%);
+
+
+}
+
+#bit-artik{
+    width: 95%;
+    background-color: var(--pre-primary-color);
+    color: var(--tertiary-color);
+    border-radius: 1rem;
+    height: 50vh;
+    border: 1px solid var(--pre2-primary-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#giris{
+    font-family: var(--ff);
+    font-size: larger;
+}
+#sonuc-sonuc-text{
+    color: var(--accent-color);
+    font-size: x-large;
+}

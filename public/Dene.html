@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="96x96" href="/logo (2).png">
+    <link rel="stylesheet" href="dene.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Doğrulamaç</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+</head>
+<body>
+    <nav>
+        <div id="logo-container">
+            <img id="logo" src="logo.png" alt="logo">
+
+            <a>Doğrulamaç</a>
+        </div>
+        
+    </nav>
+    
+    <div id="dene-container">
+        
+        <div id="dene">
+            <div id="doğrula-label">
+                <i class="fa-solid fa-check fa-xl" id="doğrula-check"></i>
+                <p id="doğrula">DOĞRULA</p>
+                <div id="model-info">
+                    <p>&nbsp;google/gemma-2-9b&nbsp;</p>
+                </div>
+            </div>
+            <div id="giris-sonuc">
+                <div id="selections">
+                    <div id="uiorapi">
+                        <div onclick="uiclick()" id="ui">
+                            <i class="fa-solid fa-sliders"></i>
+                            <p>UI</p>
+                        </div>
+                        <div onclick="apiclick()" id="api">
+                            <i class="fa-solid fa-code"></i>
+                            <p>API</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="languages" style="display: none;">
+                        <div onclick="python()" id="python">
+                            Python
+                        </div>
+                        <div onclick="javascript()" id="javascript">
+                            JavaScript
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="giris-sonuc-textarea">
+                    <div id="giris-container">  
+                        <textarea placeholder="Doğrulanacak haberinizi giriniz." id="giris" ></textarea>
+                        <div id="settings">
+                            <input type="checkbox" id="checkbox" >
+                            <label for="checkbox">Benzer haberler bulunsun mu?</label>
+                            <button onclick="temizle()" id="temizle-button">Temizle</button>
+                            <button onclick="dogrula()" id="doğrula-button">Doğrula</button>
+                            
+                        </div>
+
+                    </div>
+                    <div id="sonuc-container">
+                        <div id="sonuc-bekleme">
+                            <img id="sonuc-logo" src="logo (2).png" alt="logo" style="display: none;">
+                            <span></span>
+                        </div>
+                       <div id="bit-artik" style="display: none;">
+                            <div id="sonuc-dogru" style="display: none;">
+                                <i class="fa-solid fa-check fa-xl"></i>
+                                &nbsp;
+                                <span id="sonuc-sonuc-text">Değerlendirme Sonucu:<b> Doğru</b></span>
+                            </div>
+                            <div id="sonuc-yanlis" style="display: none;">
+                                <i class="fa-solid fa-xmark fa-2xl"></i>
+                                &nbsp;
+                                <span id="sonuc-sonuc-text">Değerlendirme Sonucu:<b> Yanlış </b></span>
+                            </div>
+                            <div id="sonuc" disabled>
+                                
+                            </div>
+                       </div>
+                        
+                        
+                        
+                        <div id="benzerhaberlersonuc"></div>
+                    </div>
+                </div>
+                <div id="api-container" style="display: none;">
+                    <pre id="api-code-py">
+                        <code id="api-code-py" class="language-python">
+import requests
+url = 'https://api.dogrulamac.com'
+data = {'text': 'Doğrulanacak haberinizi giriniz.'}
+response = requests.post(url, data=data)
+print(response.json())
+                        </code>
+                    </pre>
+                    <pre id="api-code-js">
+                        <code id="api-code-js" class="language-javascript">
+dataToSend = JSON.stringify(dataToSend);
+
+let res = await fetch("http://localhost:8080/predict", {
+    method: "POST", 
+    headers: { "Content-Type": "application/json" },
+    body: dataToSend
+});
+let data = await res.json();
+                        </code>
+                    </pre>
+                    
+                </div>
+                
+            </div>
+        </div>
+            
+    </div>
+    <script src="https://kit.fontawesome.com/163691abe4.js" crossorigin="anonymous"></script>
+    <script src="./indexDene.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</body>
+</html>
