@@ -28,14 +28,14 @@ TÜBİTAK 2204-A Lise Öğrencileri Araştırma Projeleri Yarışması kapsamın
 |   |   ├── BERT.ipynb                     # training with BERT English
 |   |   ├── roBERTA.ipynb                  # training with roBERTA English
 |   |   └── gemma-2.ipynb                  # training with Gemma-2
-|   └── Turkish                            
-|       ├── lineer_regression.ipynb        # training with Lineer Regression
-|       ├── naive_bayes.ipynb              # training with Naive Bayes
-|       ├── XGBoost.ipynb                  # training with XGBoost
-|       ├── random_forest.ipynb            # training with Random Forest
-|       ├── SVM.ipynb                      # training with SVM
-|       ├── LSTM.ipynb                     # training with LSTM
-|       ├── BERT.ipynb                     # training with BERT Turkish
-|       ├── roBERTA.ipynb                  # training with roBERTA Turkish
-|       └── gemma-2.ipynb                  # training with Gemma-2
+|   ├── Turkish                            
+|   |   ├── lineer_regression.ipynb        # training with Lineer Regression
+|   |   ├── naive_bayes.ipynb              # training with Naive Bayes
+|   |   ├── XGBoost.ipynb                  # training with XGBoost
+|   |   ├── random_forest.ipynb            # training with Random Forest
+|   |   ├── SVM.ipynb                      # training with SVM
+|   |   ├── LSTM.ipynb                     # training with LSTM
+|   |   ├── BERT.ipynb                     # training with BERT Turkish
+|   |   ├── roBERTA.ipynb                  # training with roBERTA Turkish
+|   |   └── gemma-2.ipynb                  # training with Gemma-2
 ```
