@@ -31,7 +31,7 @@ Oluşturulan web sitesine http://www.dogrulamac.me/ adresinden ulaşılabilir.
 |   |   ├── roBERTA.ipynb                  # training with roBERTA English
 |   |   └── gemma-2.ipynb                  # training with Gemma-2
 |   ├── Turkish                            
-|   |   ├── lineer_regression.ipynb        # training with Lineer Regression
+|   |   ├── lojistik_regression.ipynb        # training with Lineer Regression
 |   |   ├── naive_bayes.ipynb              # training with Naive Bayes
 |   |   ├── XGBoost.ipynb                  # training with XGBoost
 |   |   ├── random_forest.ipynb            # training with Random Forest
