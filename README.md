@@ -38,6 +38,5 @@ Oluşturulan web sitesine http://www.dogrulamac.me/ adresinden ulaşılabilir.
 |   |   ├── SVM.ipynb                      # training with SVM
 |   |   ├── LSTM.ipynb                     # training with LSTM
 |   |   ├── BERT.ipynb                     # training with BERT Turkish
-|   |   ├── roBERTA.ipynb                  # training with roBERTA Turkish
 |   |   └── gemma-2.ipynb                  # training with Gemma-2
 ```
