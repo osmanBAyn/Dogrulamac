@@ -1,6 +1,8 @@
 # Oluşturulan Türkçe Veri Setiyle Geniş Dil Modeli Tabanlı Sahte Haber Tespiti Uygulaması: Doğrulamaç
 TÜBİTAK 2204-A Lise Öğrencileri Araştırma Projeleri Yarışması kapsamında hazırlanan _Oluşturulan Türkçe Veri Setiyle Geniş Dil Modeli Tabanlı Sahte Haber Tespiti Uygulaması: Doğrulamaç_ adlı projenin reposudur. 
 
+Oluşturulan web sitesine http://www.dogrulamac.me/ adresinden ulaşılabilir.
+
 # Dosya Düzeni
 ```
 ├── web_site_dogrulamac                    
