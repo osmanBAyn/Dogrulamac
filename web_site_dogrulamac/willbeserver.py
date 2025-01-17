@@ -11,7 +11,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from keybert import KeyBERT
 import torch
-from deep_translator import DeeplTranslator
 import torch
 import torch.nn.functional as F
 from sentence_transformers import SentenceTransformer, util
@@ -103,11 +102,11 @@ def willbeserver():
             fetch_news_content(link) for link in trusted_articles_urls[:3]
         ]
         
-        similarities = compare_with_thrusted(input_news, [article[1] for article in bbc_articles])
+        # similarities = compare_with_thrusted(input_news, [article[1] for article in bbc_articles])
         sbert_result = sbert_similarity(input_news, [article[1] for article in bbc_articles])
         print(sbert_result)
         
-        max_similarity = max(similarities)
+        # max_similarity = max(similarities)
         haberveSim = []
         for i in range(len(sbert_result[0])):
             print(sbert_result[0][i])

@@ -1,13 +1,18 @@
 import { Client } from "@gradio/client";
-const grad = await Client.connect("https://9ab2688b03d645943e.gradio.live/");
+const grad = await Client.connect("http://127.0.0.1:7860")
 
 import express from "express";
 import path from "path"
 import { fileURLToPath } from 'url';
+import cors from "cors"
+
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
-const PORT= 8080;
+const PORT= 8000;
 const app = express();
+// app.use(cors({
+//     origin: "*"
+// }));
 app.use(express.json())
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/public/favicon'));
@@ -43,6 +48,7 @@ app.post("/similarNews", async (req,res)=>{
     const haber = req.body.text;
     console.log(haber)
     let result = await getSimilarNews(haber);
+    console.log(result);
     let data = await result.json();
     res.json(data)
     return 

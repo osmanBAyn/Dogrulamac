@@ -204,7 +204,10 @@ textarea::placeholder{
         transform: rotate(360deg);
     }
 }
-
+#sonuc-dogru{
+    display: flex;
+    align-items: center;
+}
 #sonuc-dogru i{
     color: var(--accent-color);
 }

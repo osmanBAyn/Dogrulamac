@@ -76,10 +76,11 @@ async function getPrediction(text){
     };
     dataToSend = JSON.stringify(dataToSend);
     console.log(dataToSend)
-    let res = await fetch("http://localhost:8080/predict", {
+    let res = await fetch("http://dogrulamac.me/predict", {
         method: "POST", 
         headers: { "Content-Type": "application/json" },
-        body: dataToSend
+        body: dataToSend,
+        mode: "cors"
     });
     let data = await res.json();
     return data;
@@ -89,7 +90,7 @@ async function getSimilarNews(text) {
         text
     };
     dataToSend = JSON.stringify(dataToSend);
-    let res = await fetch("http://localhost:8080/similarNews", {
+    let res = await fetch("http://dogrulamac.me/similarNews", {
         method: "POST", 
         headers: { "Content-Type": "application/json" },
         body: dataToSend
@@ -104,6 +105,7 @@ async function dogrula(){
     girisText.setAttribute("disabled", "")
 
     sonuc.style.display = "none";
+    sonuc.innerHTML = "";
     sonucLogo.style.display = "block"
     beklemeEkrani.style.display = "flex"
     beklemeEkraniYazilar.textContent = "";
@@ -125,15 +127,22 @@ async function dogrula(){
         similarNews = await getSimilarNews(girisText.value)
         console.log(similarNews)
         let results = similarNews.result
-        for(let i=0;i<similarNews.result.length;i++){
-            console.log(results[i][0])
-            benzerHaberlerSonuc.innerHTML += "<a>  Haber linki: " + results[i][0] + "</a><br>" +  "Benzerlik oranı: " + results[i][1] + "<br><br>";
-
+        if(results == "No trusted articles found"){
+            benzerHaberlerSonuc.innerHTML += "Benzer haber bulunamadı.";
         }
+        else{
+            for(let i=0;i<similarNews.result.length;i++){
+                console.log(results[i][0])
+                benzerHaberlerSonuc.innerHTML += "<a>  Haber linki: " + results[i][0] + "</a><br>" +  "Benzerlik oranı: " + results[i][1] + "<br><br>";
+    
+            }
+        }
+        
     }
     
 
     let prediction = await getPrediction(girisText.value);
+    console.log(prediction);
     bitArtik.style.display = "flex"
     clearInterval(interval);
     beklemeEkrani.style.display = "none"
@@ -141,7 +150,7 @@ async function dogrula(){
     sonuc.textContent += prediction
     girisText.removeAttribute("disabled")
     dogrulaButton.removeAttribute("disabled")
-    if(prediction[6]=="Y"){
+    if(prediction[0]=="Y"){
         sonucYanlis.style.display = "flex"
     }
     else{
