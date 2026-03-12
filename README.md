@@ -27,7 +27,7 @@ __TR__
 ├── training                                 
 │   ├── English                          
 │   │   ├── BERT.ipynb                     # İngilizce için BERT ile eğitim
-│   │   ├── roBERTA.ipynb                  # İngilizce için roBERTa ile eğitim
+│   │   ├── roBERTA.ipynb                  # İngilizce için RoBERTa ile eğitim
 │   │   ├── BERT_English.py                # İngilizce için BERT ile eğitim ve cross-validation
 │   │   ├── Machine_Learning_Models.py     # İng. Makine Öğrenimi Modelleri(Logistic Regression, Naive Bayes, Random Forest ve SVM) ile eğitim ve cross-validation
 │   │   └── gemma-2.ipynb                  # İngilizce için Gemma-2 ile eğitim
