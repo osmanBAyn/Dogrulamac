@@ -28,6 +28,8 @@ __TR__
 │   ├── English                          
 │   │   ├── BERT.ipynb                     # İngilizce için BERT ile eğitim
 │   │   ├── roBERTA.ipynb                  # İngilizce için roBERTa ile eğitim
+│   │   ├── BERT_English.py                # İngilizce için BERT ile eğitim ve cross-validation
+│   │   ├── Machine_Learning_Models.py     # İng. Makine Öğrenimi Modelleri(Logistic Regression, Naive Bayes, Random Forest ve SVM) ile eğitim ve cross-validation
 │   │   └── gemma-2.ipynb                  # İngilizce için Gemma-2 ile eğitim
 │   └── Turkish                             
 │       ├── lojistik_regression.ipynb      # Lojistik Regresyon ile eğitim
@@ -35,8 +37,10 @@ __TR__
 │       ├── XGBoost.ipynb                  # XGBoost ile eğitim
 │       ├── random_forest.ipynb            # Rastgele Orman ile eğitim
 │       ├── SVM.ipynb                      # SVM ile eğitim
-│       ├── LSTM.ipynb                     # LSTM ile eğitim
 │       ├── BERT.ipynb                     # Türkçe için BERT ile eğitim
+│       ├── BiLSTM.py                      # BiLSTM ile güncel Dogrulamac veri setinde eğitim ve cross-validation
+│       ├── Machine_Learning_Models.py     # Makine Öğrenimi Modelleri ile güncel Dogrulamac veri setinde eğitim ve cross-validation
+│       ├── Turkish_BERT.py                # Türkçe için BERT ile güncel Dogrulamac veri setinde eğitim ve cross-validation
 │       └── gemma-2.ipynb                  # Türkçe için Gemma-2 ile eğitim
 ````
 
@@ -63,7 +67,9 @@ __EN__
 ├── training                               
 │   ├── English                            
 │   │   ├── BERT.ipynb                     # training with BERT English
-│   │   ├── roBERTA.ipynb                  # training with roBERTA English
+│   │   ├── BERT_English.py                # training and cross-validation with BERT English
+│   │   ├── Machine_Learning_Models.py     # training and cross-validation with Machine Learning Models (Logistic Regression, Naive Bayes, Random Forest and SVM)
+│   │   ├── roBERTA.ipynb                  # training with RoBERTa English
 │   │   └── gemma-2.ipynb                  # training with Gemma-2
 │   └── Turkish                            
 │       ├── lojistik_regression.ipynb      # training with Logistic Regression
@@ -71,7 +77,9 @@ __EN__
 │       ├── XGBoost.ipynb                  # training with XGBoost
 │       ├── random_forest.ipynb            # training with Random Forest
 │       ├── SVM.ipynb                      # training with SVM
-│       ├── LSTM.ipynb                     # training with LSTM
+│       ├── BiLSTM.py                      # training and cross-validation with BiLSTM on the current Dogrulamac dataset
+│       ├── Machine_Learning_Models.py     # training and cross-validation with Machine Learning Models on the current Dogrulamac dataset
+│       ├── Turkish_BERT.py                # training and cross-validation with BERT on the current Dogrulamac dataset
 │       ├── BERT.ipynb                     # training with BERT Turkish
 │       └── gemma-2.ipynb                  # training with Gemma-2
 ```
